@@ -17,6 +17,7 @@ int main() {
     char* ptr = reinterpret_cast<char*>(&obj);
 
     size_t offset_a = 0;
+    // aligned = (x + n - 1) & ~(n - 1)，这个公式是内存对齐中最经典、最高效的写法之一
     size_t offset_b = (offset_a + sizeof(int) + 7) & ~7;
     size_t offset_c = offset_b + sizeof(double);
 
