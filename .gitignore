@@ -27,3 +27,6 @@ replay_pid*
 *.so
 main
 a.out
+
+# python
+.venv
