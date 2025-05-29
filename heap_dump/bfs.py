@@ -37,8 +37,17 @@ from collections import deque
 
 
 def bfs(start_node):
-    pass
+    visited = set()
+    queue = deque([start_node])
 
+    while queue:
+        current = queue.popleft()
+        if current not in visited:
+            print(current.name)
+            visited.add(current)
+            for neighbor in current.references:
+                if neighbor not in visited:
+                    queue.append(neighbor)
 
 # Test
 bfs(a)
