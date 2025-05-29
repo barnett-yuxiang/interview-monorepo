@@ -1,3 +1,4 @@
+# Tree Structure:
 # A
 # ├── B
 # │   ├── D
@@ -13,7 +14,7 @@ class Node:
         self.references = []
 
 
-# 创建节点
+# Create nodes
 a = Node("A")
 b = Node("B")
 c = Node("C")
@@ -22,7 +23,7 @@ e = Node("E")
 f = Node("F")
 g = Node("G")
 
-# 建立引用关系（无向图）
+# Build reference relationships (undirected graph)
 a.references = [b, c]
 b.references = [a, d, e]
 c.references = [a, f]
