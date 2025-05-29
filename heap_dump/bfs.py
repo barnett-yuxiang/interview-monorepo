@@ -23,7 +23,7 @@ e = Node("E")
 f = Node("F")
 g = Node("G")
 
-# Build reference relationships (undirected graph)
+# Build reference relationships (undirected graph) <<<<<<
 a.references = [b, c]
 b.references = [a, d, e]
 c.references = [a, f]
