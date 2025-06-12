@@ -102,11 +102,11 @@ print("------")
 
 
 # @post-order: 8, 9, 4, 10, 5, 2, 6, 7, 3, 1
-def dfs_postorder_v1(node: TreeNode):
+def dfs_postorder_v1(root: TreeNode):
     pass
 
 
-def dfs_postorder_v1(node: TreeNode):
+def dfs_postorder_v1(root: TreeNode):
     pass
 
 
@@ -120,14 +120,26 @@ print("------")
 
 
 # @Level-order: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-def bfs_levelorder(node: TreeNode):
-    pass
+from collections import deque
+
+
+def bfs_levelorder(root: TreeNode):
+    if not root:
+        return
+
+    queue = deque([root])
+    while queue:
+        node = queue.popleft()
+        print(node.val, end=", ")
+
+        if node.left:
+            queue.append(node.left)
+        if node.right:
+            queue.append(node.right)
 
 
 print("Level-Order:")
-dfs_postorder_v1(root)
-print()
-dfs_postorder_v1(root)
+bfs_levelorder(root)
 print()
 print("------")
 # @Level-order
