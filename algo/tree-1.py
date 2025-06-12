@@ -54,7 +54,7 @@ def dfs_preorder_v2(root: TreeNode):
             stack.append(node.left)
 
 
-print("Pre-Order: ")
+print("Pre-Order:")
 dfs_preorder_v1(root)
 print()
 dfs_preorder_v2(root)
@@ -92,7 +92,7 @@ def dfs_inorder_v2(root: TreeNode):
         current = current.right
 
 
-print("In-Order: ")
+print("In-Order:")
 dfs_inorder_v1(root)
 print()
 dfs_inorder_v2(root)
@@ -110,7 +110,7 @@ def dfs_postorder_v1(node: TreeNode):
     pass
 
 
-print("Post-Order: ")
+print("Post-Order:")
 dfs_postorder_v1(root)
 print()
 dfs_postorder_v1(root)
@@ -119,9 +119,15 @@ print("------")
 # @post-order
 
 
-# @Level-order
+# @Level-order: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 def bfs_levelorder(node: TreeNode):
     pass
 
 
+print("Level-Order:")
+dfs_postorder_v1(root)
+print()
+dfs_postorder_v1(root)
+print()
+print("------")
 # @Level-order
